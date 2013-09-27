@@ -75,7 +75,7 @@ class Prestashop_Sniffs_Variables_ValidVariableNameSniff implements PHP_CodeSnif
         $varname = ltrim($tokens[$stackPtr]['content'], '$');
 
         // Ignore PHP vars
-        $keywords = array('_SERVER', '_GET', '_POST', '_REQUEST', '_SESSION', '_ENV', '_COOKIE', '_FILES', 'GLOBALS');
+        $keywords = array('_SERVER', '_GET', '_POST', '_REQUEST', '_SESSION', '_ENV', '_COOKIE', '_FILES', '_MODULE', 'GLOBALS');
         if (in_array($varname, $keywords))
         	return;
 
