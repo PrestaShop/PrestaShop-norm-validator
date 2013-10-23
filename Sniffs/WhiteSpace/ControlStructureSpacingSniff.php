@@ -83,7 +83,7 @@ class Prestashop_Sniffs_WhiteSpace_ControlStructureSpacingSniff implements PHP_C
        		
     	if ($spaces > 0)
         {
-       		$error = '1 space expected before last parenthesis "%s"; %s found';
+       		$error = 'No space expected before last parenthesis "%s"; %s found';
             $phpcsFile->addError($error, $stackPtr, 'SpaceAfterStructure', array(
             	$tokens[$stackPtr]['content'].' (... -> )',
             	$spaces,
