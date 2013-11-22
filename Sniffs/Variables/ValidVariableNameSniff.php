@@ -44,6 +44,8 @@ class Prestashop_Sniffs_Variables_ValidVariableNameSniff implements PHP_CodeSnif
 		'langMultiShop',
 		'currentIndex',
 		'tabAccess',
+		'displayName',
+		'confirmUninstall',
 	);
 
     public function register()
@@ -82,7 +84,7 @@ class Prestashop_Sniffs_Variables_ValidVariableNameSniff implements PHP_CodeSnif
         // Check if variable name is valid
         if (!in_array($varname, $this->exceptions) && !preg_match('#^[a-z][a-z0-9]*(_[a-z0-9]+)*$#', $varname))
         {
-            $error = 'Variable "%s" have not right syntaxe. Should be : "%s"';
+            $error = 'Variable "%s" have not right syntax. Should be : "%s"';
             $phpcsFile->addWarning($error, $stackPtr, 'VariableNameNotValid', array(
             	'$'.$varname,
             	'$'.$this->makeRealName($varname),
@@ -103,7 +105,7 @@ class Prestashop_Sniffs_Variables_ValidVariableNameSniff implements PHP_CodeSnif
                 	$membername = $tokens[$nextMember]['content'];
                 	if (!in_array($membername, $this->exceptions) && !preg_match('#^[_a-z][a-z0-9]*(_[a-z0-9]+)*$#', $membername))
                 	{
-			            $error = 'Variable "%s" have not right syntaxe. Should be: "%s"';
+			            $error = 'Variable "%s" have not right syntax. Should be: "%s"';
 			            $phpcsFile->addWarning($error, $stackPtr, 'VariableNameNotValid', array(
 			            	'->'.$membername,
 			            	'->'.$this->makeRealName($membername),
