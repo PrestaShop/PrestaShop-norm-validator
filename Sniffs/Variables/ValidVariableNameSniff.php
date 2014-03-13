@@ -46,6 +46,7 @@ class Prestashop_Sniffs_Variables_ValidVariableNameSniff implements PHP_CodeSnif
 		'tabAccess',
 		'displayName',
 		'confirmUninstall',
+		'className',
 	);
 
     public function register()
