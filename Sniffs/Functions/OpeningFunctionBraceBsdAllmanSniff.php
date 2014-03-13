@@ -65,7 +65,7 @@ class Prestashop_Sniffs_Functions_OpeningFunctionBraceBsdAllmanSniff implements 
      */
     public function register()
     {
-        return array(T_FUNCTION);
+        return array(T_ELSE, T_FUNCTION);
 
     }//end register()
 
@@ -82,6 +82,13 @@ class Prestashop_Sniffs_Functions_OpeningFunctionBraceBsdAllmanSniff implements 
     public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
     {
         $tokens = $phpcsFile->getTokens();
+        
+		for ($index = 0; $tokens[$stackPtr - $index]['line'] == $tokens[$stackPtr]['line']; $index += 1) {
+    		if ($tokens[$stackPtr - $index]['code'] == T_CLOSE_CURLY_BRACKET) {
+    		    $error = '"'.$tokens[$stackPtr]['content'].'" should be on a new line';
+		        $phpcsFile->addError($error, $stackPtr, 'BraceOnSameLine');
+    		}
+		}
 
         if (isset($tokens[$stackPtr]['scope_opener']) === false) {
             return;
@@ -92,10 +99,18 @@ class Prestashop_Sniffs_Functions_OpeningFunctionBraceBsdAllmanSniff implements 
         // The end of the function occurs at the end of the argument list. Its
         // like this because some people like to break long function declarations
         // over multiple lines.
-        $functionLine = $tokens[$tokens[$stackPtr]['parenthesis_closer']]['line'];
-        $braceLine    = $tokens[$openingBrace]['line'];
-
-        $lineDifference = ($braceLine - $functionLine);
+	    if ($tokens[$stackPtr]['code'] ==  T_ELSE) {
+	        $elseLine = $tokens[$stackPtr]['line'];
+	        $braceLine    = $tokens[$openingBrace]['line'];
+	
+	        $lineDifference = ($braceLine - $elseLine);
+        }
+        else {
+	        $functionLine = $tokens[$tokens[$stackPtr]['parenthesis_closer']]['line'];
+	        $braceLine    = $tokens[$openingBrace]['line'];
+	
+	        $lineDifference = ($braceLine - $functionLine);
+	    }
 
         if ($lineDifference === 0) {
             $error = 'Opening brace should be on a new line';
