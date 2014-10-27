@@ -1,29 +1,4 @@
 <?php
-/*
-* 2007-2013 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2013 PrestaShop SA
-*  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
-
 /**
  * Generic_Sniffs_Functions_FunctionCallArgumentSpacingSniff.
  *
@@ -105,13 +80,27 @@ class Prestashop_Sniffs_Functions_FunctionCallArgumentSpacingSniff implements PH
         $closeBracket = $tokens[$openBracket]['parenthesis_closer'];
 
         $nextSeperator = $openBracket;
-        while (($nextSeperator = $phpcsFile->findNext(array(T_COMMA, T_VARIABLE), ($nextSeperator + 1), $closeBracket)) !== false) {
+        while (($nextSeperator = $phpcsFile->findNext(array(T_WHITESPACE, T_COMMA, T_VARIABLE), ($nextSeperator + 1), $closeBracket)) !== false) {
             // Make sure the comma or variable belongs directly to this function call,
             // and is not inside a nested function call or array.
             $brackets    = $tokens[$nextSeperator]['nested_parenthesis'];
             $lastBracket = array_pop($brackets);
             if ($lastBracket !== $closeBracket) {
                 continue;
+            }
+
+            if ($tokens[($nextSeperator - 1)]['code'] === T_OPEN_PARENTHESIS) {
+                if (($tokens[($nextSeperator)]['code']) === T_WHITESPACE) {
+                    $error = 'Space found after opening parenthesis in function call';
+                    $phpcsFile->addError($error, $stackPtr, 'SpaceAfterOpeningParenthesis');
+                }
+            }
+
+             if ($tokens[($nextSeperator + 1)]['code'] === T_CLOSE_PARENTHESIS) {
+                if (($tokens[($nextSeperator)]['code']) === T_WHITESPACE) {
+                    $error = 'Space found before closing parenthesis in function call';
+                    $phpcsFile->addError($error, $stackPtr, 'SpaceBeforeClosingParenthesis');
+                }
             }
 
             if ($tokens[$nextSeperator]['code'] === T_COMMA) {
