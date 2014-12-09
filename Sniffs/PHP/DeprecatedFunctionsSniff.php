@@ -66,7 +66,7 @@ class Prestashop_Sniffs_PHP_DeprecatedFunctionsSniff extends Generic_Sniffs_PHP_
      *
      * @var array(string => string|null)
      */
-    protected $forbiddenFunctions = array(
+    public $forbiddenFunctions = array(
 		'p' => null,
 		'd' => null,
     );
