@@ -112,7 +112,7 @@ class Prestashop_Sniffs_WhiteSpace_DisallowSpaceIndentSniff implements PHP_CodeS
         $tokenIsString
     ) {
         // Is the line intent by something?
-        $hasIndention  = preg_match('/(^\S)|(^\s\*)|(^$)/', $lineContent) ? false : true;
+        $hasIndention  = preg_match('/(^\S)|(^\t+\s\*)|(^\s\*)|(^$)/', $lineContent) ? false : true;
         $indentionPart = '';
         if ($hasIndention === true) {
             // Spaces in strings at line start are allowed, so we don't care about.
