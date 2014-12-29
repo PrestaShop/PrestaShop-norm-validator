@@ -49,7 +49,7 @@ class Prestashop_Sniffs_Functions_FunctionNeedScopeSniff extends PHP_CodeSniffer
 		if (!in_array($tokens[$previous]['code'], PHP_CodeSniffer_Tokens::$scopeModifiers))
 		{
 			// If static keyword found, check the keyword before
-			if ($tokens[$previous]['code'] === T_STATIC)
+			if ($tokens[$previous]['code'] === T_STATIC || $tokens[$previous]['code'] === T_ABSTRACT)
 			{
 				$previous = $phpcsFile->findPrevious(T_WHITESPACE, $previous - 1, null, true);
 				if (in_array($tokens[$previous]['code'], PHP_CodeSniffer_Tokens::$scopeModifiers))
