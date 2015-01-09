@@ -59,4 +59,6 @@
 	<rule ref="Generic.Functions.FunctionCallArgumentSpacing" />
 	<rule ref="Squiz.Functions.LowercaseFunctionKeywords" />
 	<rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman" />
+
+	<!-- Loops -->
 </ruleset>
