@@ -24,4 +24,11 @@
 	<rule ref="Squiz.Classes.LowercaseClassKeywords.php" />
 	<rule ref="Squiz.Classes.SelfMemberReference" />
 	<rule ref="Squiz.Classes.ValidClassName" />
+
+	<!-- CodeAnalysis -->
+	<rule ref="Generic.CodeAnalysis.EmptyStatement" />
+	<rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop" />
+	<rule ref="Generic.CodeAnalysis.UnconditionalIfStatement" />
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
+	<rule ref="Generic.CodeAnalysis.UselessOverridingMethod" />
 </ruleset>
