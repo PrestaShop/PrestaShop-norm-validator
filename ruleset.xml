@@ -81,4 +81,10 @@
 
 	<!-- Scope -->
 	<rule ref="Squiz.Scope.StaticThisUsage" />
+
+	<!-- Strings -->
+	<rule ref="Squiz.Strings.EchoedStrings" />
+	<rule ref="Squiz.Strings.ConcatenationSpacing" />
+	<rule ref="Squiz.Strings.DoubleQuoteUsage" />
+	<rule ref="Generic.Strings.UnnecessaryStringConcat" />
 </ruleset>
