@@ -41,4 +41,13 @@
 	<rule ref="Squiz.ControlStructures.LowercaseDeclaration" />
 
 	<!-- Debug -->
+
+	<!-- Files -->
+	<rule ref="Generic.Files.LineEndings" />
+	<rule ref="Generic.Files.LineLength">
+		<properties>
+			<property name="lineLimit" value="150"/>
+			<property name="absoluteLineLimit" value="0"/>
+		</properties>
+	</rule>
 </ruleset>
