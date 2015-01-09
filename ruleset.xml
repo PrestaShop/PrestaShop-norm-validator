@@ -50,4 +50,8 @@
 			<property name="absoluteLineLimit" value="0"/>
 		</properties>
 	</rule>
+
+	<!-- Formatting -->
+	<rule ref="Generic.Formatting.DisallowMultipleStatements" />
+	<rule ref="Generic.Formatting.NoSpaceAfterCast" />
 </ruleset>
