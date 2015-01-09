@@ -78,4 +78,7 @@
 	<rule ref="Generic.PHP.ForbiddenFunctions" />
 	<rule ref="Generic.PHP.LowerCaseConstant" />
 	<rule ref="Generic.PHP.NoSilencedErrors" />
+
+	<!-- Scope -->
+	<rule ref="Squiz.Scope.StaticThisUsage" />
 </ruleset>
