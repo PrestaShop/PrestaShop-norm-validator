@@ -32,7 +32,7 @@
 	"support": {
 		"issues": "https://github.com/Konafets/PrestaShopCodingStandard/issues",
 		"wiki": "http://doc.prestashop.com/display/PS15/Coding+Standards",
-		"source": "git@github.com:Konafets/PrestaShopCodingStandard.git"
+		"source": "https://github.com/Konafets/PrestaShopCodingStandard.git"
 	},
 
 	"autoload": {
