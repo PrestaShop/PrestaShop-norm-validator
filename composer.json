@@ -1,0 +1,43 @@
+{
+	"name": "Konafets/PrestaShopCodingStandard",
+	"type": "phpcodesniffer-standard",
+	"description": "This repository contains the sniffs for Prestashop. They are are compatible with the PHP_CodeSniffer.",
+	"homepage": "https://github.com/Konafets/PrestaShop-norm-validator",
+	"keywords": ["prestashop", "phpcs", "standards", "coding guidelines", "codesniffer", "quality assurance", "ecommerce"],
+	"license": "OSL-3.0",
+	"authors": [
+		{
+			"name": "Stefano Kowalke",
+			"email": "blueduck@gmx.net",
+			"role": "lead"
+		},
+		{
+			"name": "François Gaillard",
+			"email": "gailla.fr@gmail.com",
+			"role": "lead"
+		},
+		{
+			"name": "Jérôme Nadaud",
+			"email": "jerome.nadaud@prestashop.com",
+			"role": "lead"
+		}
+	],
+
+	"require": {
+		"php": ">=5.2.1",
+		"squizlabs/php_codesniffer": "~2.0",
+		"simplyadmire/composer-plugins": "~1.0"
+	},
+
+	"support": {
+		"issues": "https://github.com/Konafets/PrestaShopCodingStandard/issues",
+		"wiki": "http://doc.prestashop.com/display/PS15/Coding+Standards",
+		"source": "git@github.com:Konafets/PrestaShopCodingStandard.git"
+	},
+
+	"autoload": {
+		"classmap": [
+		"Sniffs/"
+		]
+	}
+}
