@@ -1,4 +1,4 @@
-PrestaShop-norm-validator
+PrestaShopCodingStandard
 =========================
 
 Installation
