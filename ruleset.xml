@@ -19,4 +19,9 @@
 
 	<!-- Arrays -->
 	<rule ref="Squiz.Arrays.ArrayBracketSpacing" />
+
+	<!-- Classes -->
+	<rule ref="Squiz.Classes.LowercaseClassKeywords.php" />
+	<rule ref="Squiz.Classes.SelfMemberReference" />
+	<rule ref="Squiz.Classes.ValidClassName" />
 </ruleset>
