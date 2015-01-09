@@ -31,4 +31,7 @@
 	<rule ref="Generic.CodeAnalysis.UnconditionalIfStatement" />
 	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
 	<rule ref="Generic.CodeAnalysis.UselessOverridingMethod" />
+
+	<!-- Commenting -->
+	<rule ref="Generic.Commenting.Todo" />
 </ruleset>
