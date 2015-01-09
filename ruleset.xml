@@ -71,4 +71,11 @@
 
 	<!-- Operators -->
 	<rule ref="Squiz.Operators.ValidLogicalOperators" />
+
+	<!-- PHP -->
+	<rule ref="Generic.PHP.DeprecatedFunctions" />
+	<rule ref="Generic.PHP.DisallowShortOpenTag" />
+	<rule ref="Generic.PHP.ForbiddenFunctions" />
+	<rule ref="Generic.PHP.LowerCaseConstant" />
+	<rule ref="Generic.PHP.NoSilencedErrors" />
 </ruleset>
