@@ -68,4 +68,7 @@
 	<rule ref="Generic.NamingConventions.UpperCaseConstantName" />
 
 	<!-- Objects -->
+
+	<!-- Operators -->
+	<rule ref="Squiz.Operators.ValidLogicalOperators" />
 </ruleset>
