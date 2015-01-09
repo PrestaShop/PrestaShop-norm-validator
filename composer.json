@@ -1,8 +1,8 @@
 {
-	"name": "Konafets/PrestaShopCodingStandard",
+	"name": "konafets/prestashop-codingstandard",
 	"type": "phpcodesniffer-standard",
 	"description": "This repository contains the sniffs for Prestashop. They are are compatible with the PHP_CodeSniffer.",
-	"homepage": "https://github.com/Konafets/PrestaShop-norm-validator",
+	"homepage": "https://github.com/Konafets/PrestaShopCodingStandard",
 	"keywords": ["prestashop", "phpcs", "standards", "coding guidelines", "codesniffer", "quality assurance", "ecommerce"],
 	"license": "OSL-3.0",
 	"authors": [

@@ -19,7 +19,7 @@ System-wide
 
 ::
 
-        $ composer global require "Konafets/PrestaShopCodingStandard": "dev-master" ```
+        $ composer global require "konafets/prestashop-codingstandard": "dev-master" ```
 
 Make sure you have ~/.composer/vendor/bin/ in your PATH.
 
@@ -32,7 +32,7 @@ Create a composer.json in the root folder of your project and declare this stand
 
         {
                 "require": {
-                        "Konafets/PrestaShopCodingStandard": "~1.0"
+                        "konafets/prestashop-codingstandard": "~1.0"
                 }
         }
 
@@ -42,7 +42,7 @@ This will install latest version from the 1.0 branch of this standard. If you li
 
         {
                 "require": {
-                        "Konafets/PrestaShopCodingStandard": "dev-master"
+                        "konafets/prestashop-codingstandard": "dev-master"
                 }
         }
 
@@ -67,7 +67,7 @@ PEAR
 ::
 
         $ cd /path/to/pear/PHP/CodeSniffer/Standards
-        $ git clone https://github.com/PrestaShop/PrestaShop-norm-validator.git Prestashop
+        $ git clone https://github.com/Konafets/PrestaShopCodingStandard.git Prestashop
 
 
 Does it sniff?
