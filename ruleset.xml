@@ -16,4 +16,7 @@
 	<exclude-pattern>*/tools/*</exclude-pattern>
 	<exclude-pattern>*/translations/*</exclude-pattern>
 	<exclude-pattern>*/upload/*</exclude-pattern>
+
+	<!-- Arrays -->
+	<rule ref="Squiz.Arrays.ArrayBracketSpacing" />
 </ruleset>
