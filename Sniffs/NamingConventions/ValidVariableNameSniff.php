@@ -31,7 +31,7 @@
  * 	not valid :	$isOK, $mY_test, $IlOvEpReStAsHoP
  *
  */
-class Prestashop_Sniffs_Variables_ValidVariableNameSniff implements PHP_CodeSniffer_Sniff
+class Prestashop_Sniffs_NamingConventions_ValidVariableNameSniff implements PHP_CodeSniffer_Sniff
 {
 	public $exceptions = array(
 		'fieldsRequired',

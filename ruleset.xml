@@ -61,4 +61,9 @@
 	<rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman" />
 
 	<!-- Loops -->
+
+	<!-- NamingConventions -->
+	<rule ref="Generic.NamingConventions.ConstructorName" />
+	<rule ref="Squiz.NamingConventions.ValidFunctionName" />
+	<rule ref="Generic.NamingConventions.UpperCaseConstantName" />
 </ruleset>
