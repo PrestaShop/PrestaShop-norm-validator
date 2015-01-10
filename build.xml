@@ -39,7 +39,7 @@
 
     <target name="docs">
         <exec executable="phpcs" output="documentation.html">
-            <arg value="--standard=TYPO3SniffPool"/>
+            <arg value="--standard=Prestashop"/>
             <arg value="--generator=html"/>
         </exec>
     </target>
