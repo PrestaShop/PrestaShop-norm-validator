@@ -41,7 +41,7 @@
  * won't trigger any warning.
  * 
  */
-class Prestashop_Sniffs_ControlStructures_noBracketsForSingleInstructionSniff implements PHP_CodeSniffer_Sniff
+class Prestashop_Sniffs_ControlStructures_NoBracketsForSingleInstructionSniff implements PHP_CodeSniffer_Sniff
 {
 	protected static $instructionsKeywords = array(
                 T_IF,

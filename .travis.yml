@@ -1,0 +1,22 @@
+language: php
+
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+  - 5.6
+  - hhvm
+
+matrix:
+  allow_failures:
+    - php: hhvm
+
+before_script:
+  - composer self-update
+  - composer install --prefer-source --dev
+  - mkdir ./vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/Prestashop
+  - ln -s ../../../../../../ruleset.xml ./vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/Prestashop/ruleset.xml
+  - ln -s ../../../../../../Sniffs ./vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/Prestashop/Sniffs
+
+script:
+ - ant build
