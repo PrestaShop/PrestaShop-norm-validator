@@ -23,10 +23,17 @@
 		}
 	],
 
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/Konafets/ComposerPlugins"
+		}
+ 	],
+
 	"require": {
 		"php": ">=5.2.1",
 		"squizlabs/php_codesniffer": "~2.1",
-		"simplyadmire/composer-plugins": "~1.0"
+		"konafets/composer-plugins": "*"
 	},
 
 	"support": {
