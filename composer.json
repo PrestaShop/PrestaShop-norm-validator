@@ -1,25 +1,25 @@
 {
-	"name": "konafets/prestashop-codingstandard",
+	"name": "prestashop/prestashop-codingstandard",
 	"type": "phpcodesniffer-standard",
 	"description": "This repository contains the sniffs for Prestashop. They are are compatible with the PHP_CodeSniffer.",
-	"homepage": "https://github.com/Konafets/PrestaShopCodingStandard",
+	"homepage": "https://github.com/PrestaShop/PrestaShopCodingStandard",
 	"keywords": ["prestashop", "phpcs", "standards", "coding guidelines", "codesniffer", "quality assurance", "ecommerce"],
 	"license": "OSL-3.0",
 	"authors": [
 		{
-			"name": "Stefano Kowalke",
-			"email": "blueduck@gmx.net",
-			"role": "lead"
-		},
-		{
 			"name": "François Gaillard",
 			"email": "gailla.fr@gmail.com",
-			"role": "lead"
+			"role": "Lead"
 		},
 		{
 			"name": "Jérôme Nadaud",
 			"email": "jerome.nadaud@prestashop.com",
-			"role": "lead"
+			"role": "Lead"
+		},
+		{
+			"name": "Stefano Kowalke",
+			"email": "blueduck@gmx.net",
+			"role": "Developer"
 		}
 	],
 
@@ -37,9 +37,9 @@
 	},
 
 	"support": {
-		"issues": "https://github.com/Konafets/PrestaShopCodingStandard/issues",
+		"issues": "https://github.com/PrestaShop/PrestaShopCodingStandard/issues",
 		"wiki": "http://doc.prestashop.com/display/PS15/Coding+Standards",
-		"source": "https://github.com/Konafets/PrestaShopCodingStandard.git"
+		"source": "https://github.com/PrestaShop/PrestaShopCodingStandard.git"
 	},
 
 	"autoload": {

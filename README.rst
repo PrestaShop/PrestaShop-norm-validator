@@ -17,9 +17,11 @@ In case you don't installed PHP_CodeSniffer yet - no problem. This package is ma
 System-wide
 """""""""""
 
+Will come soon
+
 ::
 
-        $ composer global require "konafets/prestashop-codingstandard": "dev-develop" ```
+        $ composer global require "prestashop/prestashop-codingstandard": "dev-develop"
 
 Make sure you have ~/.composer/vendor/bin/ in your PATH.
 
@@ -32,7 +34,7 @@ Create a composer.json in the root folder of your project and declare this stand
 
         {
                 "require": {
-                        "konafets/prestashop-codingstandard": "dev-develop"
+                        "prestashop/prestashop-codingstandard": "dev-develop"
                 }
         }
 
@@ -57,7 +59,7 @@ PEAR
 ::
 
         $ cd /path/to/pear/PHP/CodeSniffer/Standards
-        $ git clone https://github.com/Konafets/PrestaShopCodingStandard.git Prestashop
+        $ git clone https://github.com/PrestaShop/PrestaShopCodingStandard.git Prestashop
 
 
 Does it sniff?
