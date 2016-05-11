@@ -1,10 +1,12 @@
-PrestaShop-norm-validator
-=========================
+# /!\ DEPRECATED /!\
 
-Since version 1.6.1.0 of PrestaShop, we are using the [PSR-2 Coding Style Guide](http://www.php-fig.org/psr/psr-2/) as our coding standards. [Learn more about this here](http://build.prestashop.com/news/prestashop-moves-to-psr-2/).
+This follows our old norm, do not use it of your using PrestaShop 1.6.1.0+
 
-Installation
-------------
+Since version 1.6.1.0 of PrestaShop, we are using the [PSR-2 Coding Style Guide](http://www.php-fig.org/psr/psr-2/) as our coding standards.
+
+All PrestaShop Coding Standards have been [introduced here](http://build.prestashop.com/news/prestashop-coding-standards/).
+
+### Installation
 
 1. Install phpcs:
         pear install PHP_CodeSniffer
